@@ -103,8 +103,6 @@ class Message extends AsyncComponent<RouteComponentProps<MessageRouteProps>, Mes
                 outputs,
                 unlockAddresses,
                 transferTotal
-            }, async () => {
-                await this.updateMessageDetails();
             });
 
             this.setState({

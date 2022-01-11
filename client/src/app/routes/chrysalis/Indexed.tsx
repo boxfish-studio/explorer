@@ -131,6 +131,8 @@ class Indexed extends AsyncComponent<RouteComponentProps<IndexedRouteProps>, Ind
                                     <h2>General</h2>
                                     <Modal icon={ModalIcon.Info} data={messageJSON} />
                                 </div>
+                                {this.state.statusBusy && (<div className="status-message">{this.state.status}</div>)}
+
                             </div>
                             <div className="section--data">
                                 <div className="label row middle">

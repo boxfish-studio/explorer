@@ -1,7 +1,7 @@
-@import '../../../scss/fonts';
-@import '../../../scss/mixins';
-@import '../../../scss/media-queries';
-@import '../../../scss/variables';
+@import "../../../scss/fonts";
+@import "../../../scss/mixins";
+@import "../../../scss/media-queries";
+@import "../../../scss/variables";
 
 .indexed {
   display: flex;
@@ -22,6 +22,14 @@
         max-width: 100%;
         padding-right: 20px;
         padding-left: 20px;
+      }
+
+      .status-message {
+        @include font-size(12px);
+
+        color: var(--header-color);
+        font-family: $metropolis;
+        letter-spacing: 0.02em;
       }
 
       .indexed-number {

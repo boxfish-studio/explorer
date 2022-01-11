@@ -24,14 +24,6 @@
         padding-left: 20px;
       }
 
-      .status-message {
-        @include font-size(12px);
-
-        color: var(--header-color);
-        font-family: $metropolis;
-        letter-spacing: 0.02em;
-      }
-
       .indexed-number {
         @include font-size(12px);
 

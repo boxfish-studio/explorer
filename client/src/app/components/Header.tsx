@@ -222,7 +222,6 @@ class Header extends Component<HeaderProps, HeaderState> {
                                                 onClick={() =>
                                                     this.setState({
                                                         isMenuExpanded: false,
-                                                        isUtilitiesExpanded: false,
                                                         isNetworkSwitcherExpanded: false
                                                     })}
                                             >

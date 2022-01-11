@@ -16,6 +16,7 @@ import NetworkSwitcher from "./NetworkSwitcher";
 /**
  * Component which will show the header.
  */
+console.log("-------------", window.location.pathname);
 class Header extends Component<HeaderProps, HeaderState> {
     /**
      * Create a new instance of Header.
@@ -114,6 +115,7 @@ class Header extends Component<HeaderProps, HeaderState> {
                                                 to={utility.url}
                                                 onClick={() =>
                                                     this.setState({ isUtilitiesExpanded: false })}
+                                                className={utility.url === window.location.pathname ? "active" : ""}
                                             >
                                                 {utility.label}
                                             </Link>
@@ -219,7 +221,9 @@ class Header extends Component<HeaderProps, HeaderState> {
                                             >
                                                 <li
                                                     key={utility.url}
-                                                    className="menu--expanded__item margin-l-t"
+                                                    className={classNames("menu--expanded__item margin-l-t",
+                                                        { active: utility.url === window.location.pathname })}
+
                                                 >
                                                     {utility.label}
                                                 </li>

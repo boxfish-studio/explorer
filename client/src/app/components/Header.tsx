@@ -16,7 +16,6 @@ import NetworkSwitcher from "./NetworkSwitcher";
 /**
  * Component which will show the header.
  */
-console.log("-------------", window.location.pathname);
 class Header extends Component<HeaderProps, HeaderState> {
     /**
      * Create a new instance of Header.

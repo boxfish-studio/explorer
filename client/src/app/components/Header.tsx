@@ -79,7 +79,10 @@ class Header extends Component<HeaderProps, HeaderState> {
                                 <Link
                                     key={page.url}
                                     to={page.url}
-                                    onClick={() => this.setState({ isUtilitiesExpanded: false })}
+                                    onClick={() => this.setState({
+                                        isUtilitiesExpanded: false,
+                                        isNetworkSwitcherExpanded: false
+                                    })}
                                     className={`navigation--item ${page.url === window.location.pathname ? "active" : ""
                                         }`}
                                 >
@@ -173,7 +176,11 @@ class Header extends Component<HeaderProps, HeaderState> {
                                                 key={page.url}
                                                 to={page.url}
                                                 onClick={() =>
-                                                    this.setState({ isMenuExpanded: false })}
+                                                    this.setState({
+                                                        isMenuExpanded: false,
+                                                        isNetworkSwitcherExpanded: false,
+                                                        isUtilitiesExpanded: false
+                                                    })}
                                             >
                                                 <li className="menu--expanded__item" key={page.url}>
                                                     <span
@@ -216,7 +223,8 @@ class Header extends Component<HeaderProps, HeaderState> {
                                                 onClick={() =>
                                                     this.setState({
                                                         isMenuExpanded: false,
-                                                        isUtilitiesExpanded: false
+                                                        isUtilitiesExpanded: false,
+                                                        isNetworkSwitcherExpanded: false
                                                     })}
                                             >
                                                 <li

@@ -259,7 +259,8 @@ class Transaction extends AsyncComponent<RouteComponentProps<TransactionRoutePro
                                                                         <Link
                                                                             to={
                                                                                 `/${this.props.match.params.network
-                                                                                }/transaction/${this.state.actionResultHash}`
+                                                                                }/transaction/
+                                                                                ${this.state.actionResultHash}`
                                                                             }
                                                                             className="margin-r-t"
                                                                         >
@@ -489,7 +490,8 @@ class Transaction extends AsyncComponent<RouteComponentProps<TransactionRoutePro
                                                                 classNames(
                                                                     "card--value",
                                                                     "card--value-textarea",
-                                                                    `card--value-textarea__${this.state.showRawMessageTrytes
+                                                                    `card--value-textarea__
+                                                                    ${this.state.showRawMessageTrytes
                                                                         ? "trytes"
                                                                         : this.state.messageType?.toLowerCase()
                                                                     }`
@@ -525,7 +527,8 @@ class Transaction extends AsyncComponent<RouteComponentProps<TransactionRoutePro
                                                             <Link
                                                                 to={
                                                                     `/${this.props.match.params.network
-                                                                    }/transaction/${this.state.details?.tx.trunkTransaction
+                                                                    }/transaction/
+                                                                    ${this.state.details?.tx.trunkTransaction
                                                                     }`
                                                                 }
                                                             >
@@ -539,7 +542,8 @@ class Transaction extends AsyncComponent<RouteComponentProps<TransactionRoutePro
                                                             <Link
                                                                 to={
                                                                     `/${this.props.match.params.network
-                                                                    }/transaction/${this.state.details?.tx.branchTransaction
+                                                                    }/transaction/
+                                                                    ${this.state.details?.tx.branchTransaction
                                                                     }`
                                                                 }
                                                             >

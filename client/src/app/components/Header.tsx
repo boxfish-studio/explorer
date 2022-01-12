@@ -117,7 +117,9 @@ class Header extends Component<HeaderProps, HeaderState> {
                                                 to={utility.url}
                                                 onClick={() =>
                                                     this.setState({ isUtilitiesExpanded: false })}
-                                                className={utility.url === window.location.pathname ? "active" : ""}
+                                                className={classNames(
+                                                    { active: utility.url === window.location.pathname }
+                                                )}
                                             >
                                                 {utility.label}
                                             </Link>

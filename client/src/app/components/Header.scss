@@ -108,7 +108,7 @@ header {
       letter-spacing: 0.01em;
 
       &.active {
-        color: var(--header-color);
+        color: var(--active-item-color);
       }
     }
 
@@ -136,7 +136,7 @@ header {
 
         &.opened {
           .label {
-            color: var(--header-color);
+            color: var(--active-item-color);
           }
 
           .icon {
@@ -144,7 +144,7 @@ header {
               transform: rotate(-180deg);
 
               path {
-                stroke: var(--header-color);
+                stroke: var(--active-item-color);
               }
             }
           }
@@ -174,7 +174,7 @@ header {
           letter-spacing: 0.5px;
 
           &.active {
-            color: var(--header-color);
+            color: var(--active-item-color);
           }
 
           @include font-size(14px, 21px);
@@ -191,7 +191,7 @@ header {
       }
 
       &.active {
-        color: var(--header-color);
+        color: var(--active-item-color);
       }
     }
 
@@ -322,7 +322,7 @@ header {
 
       span {
         &.active {
-          color: var(--header-color);
+          color: var(--active-item-color);
         }
       }
 
@@ -343,7 +343,7 @@ header {
         cursor: pointer;
 
         &.active {
-          color: var(--header-color);
+          color: var(--active-item-color);
         }
 
         a,
@@ -368,12 +368,16 @@ header {
 
         &.opened {
           .label {
-            color: var(--header-color);
+            color: var(--active-item-color);
           }
 
           .icon {
             svg {
               transform: rotate(-180deg);
+
+              path {
+                stroke: var(--active-item-color);
+              }
             }
           }
         }

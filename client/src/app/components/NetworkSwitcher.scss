@@ -73,7 +73,7 @@
     margin: auto;
     padding: 40px;
 
-    @include tablet-down {
+    @media (max-width: 1200px) {
       display: block;
       padding: 24px;
 

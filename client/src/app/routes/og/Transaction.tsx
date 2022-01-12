@@ -259,8 +259,7 @@ class Transaction extends AsyncComponent<RouteComponentProps<TransactionRoutePro
                                                                         <Link
                                                                             to={
                                                                                 `/${this.props.match.params.network
-                                                                                }/transaction/${
-                                                                                    this.state.actionResultHash}`
+                                                                                }/transaction/${this.state.actionResultHash}`
                                                                             }
                                                                             className="margin-r-t"
                                                                         >
@@ -284,7 +283,7 @@ class Transaction extends AsyncComponent<RouteComponentProps<TransactionRoutePro
                                 </div>
                                 {this.state.status && (
                                     <div className="card margin-t-s">
-                                        <div className="card--content middle row">
+                                        <div className="card--content middle row margin-t-s">
                                             {this.state.statusBusy && (<Spinner />)}
                                             <p className="status">
                                                 {this.state.status}
@@ -490,8 +489,7 @@ class Transaction extends AsyncComponent<RouteComponentProps<TransactionRoutePro
                                                                 classNames(
                                                                     "card--value",
                                                                     "card--value-textarea",
-                                                                    `card--value-textarea__${
-                                                                        this.state.showRawMessageTrytes
+                                                                    `card--value-textarea__${this.state.showRawMessageTrytes
                                                                         ? "trytes"
                                                                         : this.state.messageType?.toLowerCase()
                                                                     }`
@@ -527,8 +525,7 @@ class Transaction extends AsyncComponent<RouteComponentProps<TransactionRoutePro
                                                             <Link
                                                                 to={
                                                                     `/${this.props.match.params.network
-                                                                    }/transaction/${
-                                                                        this.state.details?.tx.trunkTransaction
+                                                                    }/transaction/${this.state.details?.tx.trunkTransaction
                                                                     }`
                                                                 }
                                                             >
@@ -542,8 +539,7 @@ class Transaction extends AsyncComponent<RouteComponentProps<TransactionRoutePro
                                                             <Link
                                                                 to={
                                                                     `/${this.props.match.params.network
-                                                                    }/transaction/${
-                                                                        this.state.details?.tx.branchTransaction
+                                                                    }/transaction/${this.state.details?.tx.branchTransaction
                                                                     }`
                                                                 }
                                                             >

@@ -198,11 +198,10 @@ class Tag extends AsyncComponent<RouteComponentProps<TagRouteProps>, TagState> {
                                             Transaction Filter
                                         </div>
                                         <div className="card--value">
-                                            <span>Show Value Transactions Only</span>
+                                            <span className="margin-r-t">Show Value Transactions Only</span>
                                             <input
                                                 type="checkbox"
                                                 checked={this.state.showOnlyValueTransactions}
-                                                className="margin-l-t"
                                                 onChange={e => this.setState(
                                                     {
                                                         showOnlyValueTransactions: e.target.checked,
@@ -217,11 +216,10 @@ class Tag extends AsyncComponent<RouteComponentProps<TagRouteProps>, TagState> {
                                             />
                                         </div>
                                         <div className="card--value">
-                                            <span>Show Confirmed Only</span>
+                                            <span className="margin-r-t">Show Confirmed Only</span>
                                             <input
                                                 type="checkbox"
                                                 checked={this.state.showOnlyConfirmedTransactions}
-                                                className="margin-l-t"
                                                 onChange={e => this.setState(
                                                     {
                                                         showOnlyConfirmedTransactions: e.target.checked,

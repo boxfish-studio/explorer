@@ -243,7 +243,7 @@ class Bundle extends Currency<RouteComponentProps<BundleRouteProps>, BundleState
                                 )}
                                 {!this.state.statusBusy && this.state.groups?.map((group, idx) => (
                                     <React.Fragment key={idx}>
-                                        <div className="row space-between margin-t-s">
+                                        <div className="row space-between margin-t-s middle">
                                             <p>
                                                 {DateHelper.format(group.timestamp)}
                                             </p>

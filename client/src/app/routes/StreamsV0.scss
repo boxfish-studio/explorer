@@ -59,7 +59,12 @@
 
         .item-details {
           @include font-size(14px);
-          padding-top: 14px;
+
+          padding-top: 20px;
+
+          @include phone-down {
+            padding-top: 0;
+          }
 
           font-family: $metropolis;
 

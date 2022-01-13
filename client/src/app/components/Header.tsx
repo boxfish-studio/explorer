@@ -90,7 +90,7 @@ class Header extends Component<HeaderProps, HeaderState> {
                                         isNetworkSwitcherExpanded: false
                                     })}
                                     className={classNames("navigation--item",
-                                        { active: page.url === window.location.pathname })}
+                                        { "active-item": page.url === window.location.pathname })}
                                 >
                                     {page.label}
                                 </Link>
@@ -125,7 +125,7 @@ class Header extends Component<HeaderProps, HeaderState> {
                                                 onClick={() =>
                                                     this.setState({ isUtilitiesExpanded: false })}
                                                 className={classNames(
-                                                    { active: utility.url === window.location.pathname }
+                                                    { "active-item": utility.url === window.location.pathname }
                                                 )}
                                             >
                                                 {utility.label}
@@ -188,7 +188,7 @@ class Header extends Component<HeaderProps, HeaderState> {
                                                 <li className="menu--expanded__item" key={page.url}>
                                                     <span
                                                         className={classNames(
-                                                            { active: page.url === window.location.pathname }
+                                                            { "active-item": page.url === window.location.pathname }
                                                         )}
                                                     >
                                                         {page.label}
@@ -229,7 +229,7 @@ class Header extends Component<HeaderProps, HeaderState> {
                                                 <li
                                                     key={utility.url}
                                                     className={classNames("menu--expanded__item margin-l-t",
-                                                        { active: utility.url === window.location.pathname })}
+                                                        { "active-item": utility.url === window.location.pathname })}
                                                 >
                                                     {utility.label}
                                                 </li>

@@ -106,10 +106,6 @@ header {
       font-family: $metropolis;
       font-weight: 600;
       letter-spacing: 0.01em;
-
-      &.active {
-        color: var(--active-item-color);
-      }
     }
 
     .utilities--wrapper {
@@ -173,10 +169,6 @@ header {
           font-family: $inter;
           letter-spacing: 0.5px;
 
-          &.active {
-            color: var(--active-item-color);
-          }
-
           @include font-size(14px, 21px);
         }
       }
@@ -188,10 +180,6 @@ header {
 
       &.opened {
         opacity: 1;
-      }
-
-      &.active {
-        color: var(--active-item-color);
       }
     }
 
@@ -320,12 +308,6 @@ header {
       transition: all 0.3s ease-in-out;
       background: var(--body-background);
 
-      span {
-        &.active {
-          color: var(--active-item-color);
-        }
-      }
-
       &.opened {
         height: 100vh;
       }
@@ -341,10 +323,6 @@ header {
         font-family: $metropolis;
         font-weight: 600;
         cursor: pointer;
-
-        &.active {
-          color: var(--active-item-color);
-        }
 
         a,
         div {

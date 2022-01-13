@@ -31,16 +31,6 @@ class Header extends Component<HeaderProps, HeaderState> {
         };
     }
 
-    /**
-     * Close expanded dropdowns
-     */
-    public resetExpandedDropdowns(): void {
-        this.setState({
-            isUtilitiesExpanded: false,
-            isNetworkSwitcherExpanded: false,
-            isMenuExpanded: false
-        });
-    }
 
     /**
      * Render the component.
@@ -269,6 +259,17 @@ class Header extends Component<HeaderProps, HeaderState> {
                 </nav>
             </header >
         );
+    }
+
+    /**
+     * Close expanded dropdowns
+     */
+    private resetExpandedDropdowns(): void {
+        this.setState({
+            isUtilitiesExpanded: false,
+            isNetworkSwitcherExpanded: false,
+            isMenuExpanded: false
+        });
     }
 }
 

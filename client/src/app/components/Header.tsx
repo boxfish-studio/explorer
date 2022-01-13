@@ -32,6 +32,17 @@ class Header extends Component<HeaderProps, HeaderState> {
     }
 
     /**
+     * Close expanded dropdowns
+     */
+    public resetExpandedDropdowns(): void {
+        this.setState({
+            isUtilitiesExpanded: false,
+            isNetworkSwitcherExpanded: false,
+            isMenuExpanded: false
+        });
+    }
+
+    /**
      * Render the component.
      * @returns The node to render.
      */
@@ -63,11 +74,7 @@ class Header extends Component<HeaderProps, HeaderState> {
                     <div className="inner--main">
                         <Link
                             to={this.props.rootPath}
-                            onClick={() => this.setState({
-                                isUtilitiesExpanded: false,
-                                isMenuExpanded: false,
-                                isNetworkSwitcherExpanded: false
-                            })}
+                            onClick={() => this.resetExpandedDropdowns()}
                             className="logo-image--wrapper"
                         >
                             <LogoHeader />
@@ -82,8 +89,8 @@ class Header extends Component<HeaderProps, HeaderState> {
                                         isUtilitiesExpanded: false,
                                         isNetworkSwitcherExpanded: false
                                     })}
-                                    className={`navigation--item ${page.url === window.location.pathname ? "active" : ""
-                                        }`}
+                                    className={classNames("navigation--item",
+                                        { active: page.url === window.location.pathname })}
                                 >
                                     {page.label}
                                 </Link>
@@ -176,21 +183,13 @@ class Header extends Component<HeaderProps, HeaderState> {
                                             <Link
                                                 key={page.url}
                                                 to={page.url}
-                                                onClick={() =>
-                                                    this.setState({
-                                                        isMenuExpanded: false,
-                                                        isNetworkSwitcherExpanded: false,
-                                                        isUtilitiesExpanded: false
-                                                    })}
+                                                onClick={() => this.resetExpandedDropdowns()}
                                             >
                                                 <li className="menu--expanded__item" key={page.url}>
                                                     <span
-                                                        className={` 
-                                                    ${page.url ===
-                                                                window.location.pathname
-                                                                ? "active"
-                                                                : ""
-                                                            }`}
+                                                        className={classNames(
+                                                            { active: page.url === window.location.pathname }
+                                                        )}
                                                     >
                                                         {page.label}
                                                     </span>
@@ -231,7 +230,6 @@ class Header extends Component<HeaderProps, HeaderState> {
                                                     key={utility.url}
                                                     className={classNames("menu--expanded__item margin-l-t",
                                                         { active: utility.url === window.location.pathname })}
-
                                                 >
                                                     {utility.label}
                                                 </li>

@@ -86,6 +86,9 @@
     }
 
     .protocol {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
       padding: 0 24px;
 
       .protocol--title {
@@ -107,10 +110,13 @@
       }
 
       .network--cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
         padding-top: 44px;
 
         .network--card {
-          height: 86px;
+          min-height: 86px;
           margin-bottom: 16px;
           padding: 4px;
           border-radius: 12px;
@@ -145,6 +151,9 @@
           }
 
           .network--content {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr auto;
             margin-left: 24px;
 
             .label {
